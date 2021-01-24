@@ -103,6 +103,7 @@ class App implements Psr\Container\ContainerInterface
             'router' => \core\RouteCollection::class,
             'pipeline' => \core\PipeLine::class,
             'config' => \core\Config::class,
+            'db' => \core\Database::class,
         ];
 
         foreach ($registers as $name => $concrete) {
