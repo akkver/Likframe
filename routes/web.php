@@ -22,3 +22,10 @@ $router->get('/db', function (){
         App::getContainer()->get('db')->select("SELECT * FROM `user_base` WHERE `uid` = ?", [$id])
     );
 });
+
+$router->get('/db2', function (){
+    $id = 1;
+    var_dump(
+        App::getContainer()->get('db')->table('user_base')->where('uid', '=', 10)->get()
+    );
+});

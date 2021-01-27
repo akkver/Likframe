@@ -37,7 +37,7 @@ class Response
         if (is_array($content)){
             $content = json_encode($content);
         }
-        $this->content = $content;
+        $this->content = (string)$content;
         return $this;
     }
 

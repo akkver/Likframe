@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace core\database;
+namespace core\database\connection;
 
 
 class Connection
