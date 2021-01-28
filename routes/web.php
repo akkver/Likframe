@@ -26,6 +26,14 @@ $router->get('/db', function (){
 $router->get('/db2', function (){
     $id = 1;
     var_dump(
-        App::getContainer()->get('db')->table('user_base')->where('uid', '=', 10)->get()
+        App::getContainer()->get('db')->table('user_base')->where('uid', 10)->get()
     );
 });
+
+$router->get('/model', function (){
+    $users = \App\User::Where('id', 1)->orWhere('id', 2)->get();
+    foreach ($users as $user) {
+        echo $user->testModel()."<br />";
+    }
+});
+

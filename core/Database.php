@@ -26,7 +26,7 @@ class Database
     // 根据配置信息的name来创建链接
     public function connection($name = null)
     {
-        if ($this->connections[$name]) {
+        if (isset($this->connections[$name])) {
             return $this->connections[$name];
         }
         if ($name == null) {
