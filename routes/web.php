@@ -37,3 +37,5 @@ $router->get('/model', function (){
     }
 });
 
+$router->get('/controller', 'UserController@index');
+

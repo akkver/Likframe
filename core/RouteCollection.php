@@ -128,9 +128,23 @@ class RouteCollection
         $middleware = $route['action']['middleware'] ?? [];
         $routeDispatch = $route['action']['uses'];
 
+        // 非闭包  就是控制器controller了
+        if (!$route['action']['uses'] instanceof \Closure) {
+            $action = $route['action'];
+            $uses = $action['uses'];
+            $uses = explode('@', $uses);
+            $controller = $action['namespace']. '\\'. $uses['0'];
+            $method = $uses['1'];
+            $controllerInstance = new $controller;
+            // 合并控制器中间件
+            $middleware = array_merge($middleware, $controllerInstance->getMiddleware());
+            $routeDispatch = function ($request) use ($route, $controllerInstance, $method) {
+                return $controllerInstance->callAction($method, [$request]);
+            };
+        }
         return \App::getContainer()->get('pipeline')->create()->setClass(
             $middleware
-        )->run($routeDispatch)($this);
+        )->run($routeDispatch)($request);
 
     }
 
