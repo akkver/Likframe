@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 
 namespace core\database\model;
@@ -32,7 +32,9 @@ class Builder
             $columns = func_get_args();
         }
         $this->query->columns = $columns;
-        $this->query->table($this->model->getTable());
+        $table = $this->model->getTable();
+        // $table = $this->query->from;
+        $this->query->table($table);
         $sql = $this->query->toSQL();
         return $this->bindModel($this->query->runSQL($sql));
     }
@@ -52,9 +54,9 @@ class Builder
         foreach ($datas as $data) {
             $model = clone $this->model;
             foreach ($data as $key => $value) {
-                $this->setOriginal($key, $value);
+                $model->setOriginal($key, $value);
             }
-            $this->syncOriginal();
+            $model->syncOriginal();
             $models[] = $model;
         }
 

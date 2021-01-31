@@ -31,7 +31,7 @@ $router->get('/db2', function (){
 });
 
 $router->get('/model', function (){
-    $users = \App\User::Where('id', 1)->orWhere('id', 2)->get();
+    $users = \App\User::Where('uid', 1)->orWhere('uid', 2)->get();
     foreach ($users as $user) {
         echo $user->testModel()."<br />";
     }

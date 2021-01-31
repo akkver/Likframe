@@ -4,14 +4,13 @@
 namespace core\database\model;
 
 
-use Cassandra;
-use Cassandra\Cluster\Builder;
+// use core\database\model\Builder;
 
 class Model
 {
     protected ?object $connection = null;
-    protected string $table;
-    protected string $primaryKey;
+    protected string $table = '';
+    protected string $primaryKey = '';
     protected bool $timestamps = true;
 
     /**
@@ -20,8 +19,8 @@ class Model
      * $attribute 原数据的复制版 用户只能修改这个 !
      * 然后跟$original相比较 得出用户修改的数据字段
      */
-    protected object $original;
-    protected object $attribute;
+    protected ?object $original = null;
+    protected ?object $attribute = null;
 
     public function __construct()
     {
