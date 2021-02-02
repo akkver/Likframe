@@ -39,3 +39,9 @@ $router->get('/model', function (){
 
 $router->get('/controller', 'UserController@index');
 
+$router->get('/view/blade', function (){
+    $str = 'this is Blade, ok Laravel';
+
+    return view('blade.index', compact('str'));
+});
+

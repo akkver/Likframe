@@ -36,3 +36,8 @@ function config($key = null)
         return App::getContainer()->get('config')->get($key) ;
     return App::getContainer()->get('config');
 }
+
+function view(string $path, array $params = [])
+{
+    return App::getContainer()->get(\core\view\ViewInterface::class)->render($path, $params);
+}

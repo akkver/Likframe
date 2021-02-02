@@ -104,6 +104,7 @@ class App implements Psr\Container\ContainerInterface
             'pipeline' => \core\PipeLine::class,
             'config' => \core\Config::class,
             'db' => \core\Database::class,
+            \core\view\ViewInterface::class => \core\view\Blade::class,
         ];
 
         foreach ($registers as $name => $concrete) {
