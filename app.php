@@ -115,6 +115,8 @@ class App implements Psr\Container\ContainerInterface
     protected function boot()
     {
         App::getContainer()->get('config')->init();
+        // 初始化视图
+        App::getContainer()->get(\core\view\ViewInterface::class)->init();
         App::getContainer()->get('router')->group([
             'namespace' => 'App\\controller',
             'middleware' => [

@@ -10,11 +10,6 @@ class Blade implements ViewInterface
 {
     protected ?object $template = null;
 
-    public function __construct()
-    {
-        $this->init();
-    }
-
     public function init()
     {
         // 获取配置
