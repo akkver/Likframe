@@ -19,6 +19,10 @@ class ComposerStaticInitb8e63eee5decb87a924a5ea305acadeb
         array (
             'voku\\' => 5,
         ),
+        't' => 
+        array (
+            'think\\' => 6,
+        ),
         'd' => 
         array (
             'duncan3dc\\Laravel\\' => 18,
@@ -67,6 +71,10 @@ class ComposerStaticInitb8e63eee5decb87a924a5ea305acadeb
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'think\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/topthink/think-template/src',
         ),
         'duncan3dc\\Laravel\\' => 
         array (

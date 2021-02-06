@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
+    'think\\' => array($vendorDir . '/topthink/think-template/src'),
     'duncan3dc\\Laravel\\' => array($vendorDir . '/duncan3dc/blade/src'),
     'core\\' => array($baseDir . '/core'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),

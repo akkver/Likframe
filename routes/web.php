@@ -45,3 +45,9 @@ $router->get('/view/blade', function (){
     return view('blade.index', compact('str'));
 });
 
+$router->get('/view/think', function (){
+    $str = 'this is Thinkphp, ok Topthink';
+
+    return view('think.index', compact('str'));
+});
+

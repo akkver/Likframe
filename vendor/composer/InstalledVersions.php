@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '2ab05fb734675ab62c36e1798342ee784f014a0f',
+    'reference' => 'abca278e4bf09553f7465a39dbb18775b2b46e4c',
     'name' => 'meng/likframe',
   ),
   'versions' => 
@@ -114,7 +114,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '2ab05fb734675ab62c36e1798342ee784f014a0f',
+      'reference' => 'abca278e4bf09553f7465a39dbb18775b2b46e4c',
     ),
     'nesbot/carbon' => 
     array (
@@ -201,6 +201,15 @@ private static $installed = array (
       array (
         0 => '2.0',
       ),
+    ),
+    'topthink/think-template' => 
+    array (
+      'pretty_version' => 'v2.0.8',
+      'version' => '2.0.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'abfc293f74f9ef5127b5c416310a01fe42e59368',
     ),
     'voku/portable-ascii' => 
     array (
