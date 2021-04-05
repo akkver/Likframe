@@ -51,3 +51,8 @@ $router->get('/view/think', function (){
     return view('think.index', compact('str'));
 });
 
+$router->get('log/stack', function (){
+    App::getContainer()->get('log')->debug('{language} is good in there!',['language'=>'Java']);
+    App::getContainer()->get('log')->info('{who} say hello world', ['who'=>'Marco']);
+});
+

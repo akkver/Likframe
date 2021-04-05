@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'abca278e4bf09553f7465a39dbb18775b2b46e4c',
+    'reference' => '8ae66c5dbbc4faae389f6bbc2444d130e22848fb',
     'name' => 'meng/likframe',
   ),
   'versions' => 
@@ -90,7 +90,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'abca278e4bf09553f7465a39dbb18775b2b46e4c',
+      'reference' => '8ae66c5dbbc4faae389f6bbc2444d130e22848fb',
     ),
     'nesbot/carbon' => 
     array (
@@ -116,6 +116,15 @@
       array (
         0 => '1.0',
       ),
+    ),
+    'psr/log' => 
+    array (
+      'pretty_version' => '1.1.3',
+      'version' => '1.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
     ),
     'psr/simple-cache' => 
     array (
