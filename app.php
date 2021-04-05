@@ -107,6 +107,7 @@ class App implements Psr\Container\ContainerInterface
             // \core\view\ViewInterface::class => \core\view\Blade::class,
             \core\view\ViewInterface::class => \core\view\Thinkphp::class,
             'log' => \core\log\Logger::class,
+            'exception' => \App\exceptions\HandleExceptions::class,
         ];
 
         foreach ($registers as $name => $concrete) {
@@ -118,6 +119,8 @@ class App implements Psr\Container\ContainerInterface
     {
         App::getContainer()->get('config')->init();
         // 初始化视图
+        App::getContainer()->get('exception')->init();
+        // app('exception')->init();
         App::getContainer()->get(\core\view\ViewInterface::class)->init();
         App::getContainer()->get('router')->group([
             'namespace' => 'App\\controller',

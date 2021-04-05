@@ -56,3 +56,10 @@ $router->get('log/stack', function (){
     App::getContainer()->get('log')->info('{who} say hello world', ['who'=>'Marco']);
 });
 
+$router->get('exception', function (){
+    throw new \App\exceptions\ErrorMessageException('this is Exception route');
+});
+
+$router->get('error', function (){
+    hellonihao;
+});
